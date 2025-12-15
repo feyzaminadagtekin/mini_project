@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="tr"> Sayfanın ana dilinin türkçe olacağını söyleyen etikettir 
+<head>
+    <meta charset="UTF-8"> Karakter kodlamasını yaparak doğru gösterilmesini sağlar
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günlük Motivasyon</title> Başlık çubuğunda görünen metindir
+    <link rel="stylesheet" href="style.css"> Sayfa görünümünü belirleyecek olan css dosyasına bağlar
+</head>
+<body> Sayfanın tüm görünür içeriği
+    <div class="container">
+        <button id="theme-toggle">🌙 Temayı Değiştir ☀️</button> üzerine tıklanabilen bir buton oluşturur
+        theme toggle ise js ile tema değiştirmek için etiket verir
+        <div class="card">
+            <p id="quote-display" class="quote">Motivasyon sözü burada görünecek.</p>
+            <button id="new-quote-btn">Yeni Söz Getir</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>html dosyasınıinteraktif işlemleri yönetecek olan js dosyasına bağlar
+</body>
+</html>

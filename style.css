@@ -1,0 +1,86 @@
+:root { /*sayfa genelinde kullanacağımız CSS değişkenlerini tanımladığımız yer*/
+    --bg-light: #f4f4f9;
+    --text-light: #333;
+    --card-light: #ffffff;
+    --btn-primary: #4CAF50;
+    --btn-hover: #45a049;
+
+    /* Başlangıç Teması (Aydınlık) */
+    --bg-color: var(--bg-light);
+    --text-color: var(--text-light);
+    --card-bg: var(--card-light);
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme { /*body etiketine darktheme adında class eklendiğinde geçerli olur*/
+    /* Karanlık Tema Değerleri */ /*bu sınıfın eklenip çıkarılma işini js yapar*/
+    --bg-color: #1e1e1e;
+    --text-color: #f4f4f9;
+    --card-bg: #2d2d30;
+    --btn-primary: #5a85ff;
+    --btn-hover: #4c7aff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Genel Stiller */
+body {
+    font-family: sans-serif;
+    display: flex; /****/
+    justify-content: center;/****/
+    align-items: center;/**** bu 4 satır kutucuğu ekranın tam ortasına yerleştirir*/
+    min-height: 100vh;/****/
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.5s ease; /*tema değiştiğinde 0.5 s iile yumuşak geçiş sağlar*/
+}
+
+.container { /*htmldaki class=containeriçin özel stiller*/
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Kart ve Söz Stilleri */
+.card { /*htmldaki class=cardiçin özel stiller*/
+    background-color: var(--card-bg);
+    padding: 40px 20px; /*kartın iç kenar boşlukları*/
+    border-radius: 12px; /*kartın köşelerini yumuşatır*/
+    box-shadow: var(--shadow); /*gölge ekler*/
+    margin-top: 20px;
+}
+
+.quote { /*motivasyon sözünün göründüğü paragraf*/
+    font-size: 1.4em;
+    font-style: italic;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Buton Stilleri */
+button { /*butonların nasıl görüneceğini belirler*/
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /*farenin butona geldiği zaman el işareti olmasını sağlar*/
+    font-size: 1em;
+    margin: 8px;
+    transition: all 0.3s ease;
+}
+
+#new-quote-btn {
+    background-color: var(--btn-primary);
+    color: white;
+}
+
+#new-quote-btn:hover { /*fare düğme üzerine geldiğinde arkaplan rengini biraz değiştirerek etkileşimi gösterir*/
+    background-color: var(--btn-hover);
+}
+
+#theme-toggle {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
